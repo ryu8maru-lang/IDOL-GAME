@@ -100,3 +100,31 @@ linear-gradient(180deg,#7ed8fa,#9ea1ff 50%,#443c74);position:relative;overflow:h
 /* v0.10 visual asset stability */
 .member-card img,.idol-chip img,.profile-head img,.song-thumb img,.poster-people img,.stage-people img{background:#eaf8ff}
 .member-card>img{aspect-ratio:3/4;object-fit:cover;object-position:center top}
+
+
+/* v0.11 HUMAN DRAMA */
+.candidate-backstory{display:inline-block;margin-top:4px;color:#52798c;line-height:1.45}
+.bio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0}
+.bio-grid>div{padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#f9fdff}
+.bio-grid span{display:block;font-size:9px;color:var(--muted);font-weight:800;margin-bottom:4px}
+.bio-grid strong{font-size:11px;line-height:1.45}
+.history-card{display:grid;grid-template-columns:105px 1fr;gap:12px;align-items:start;padding:11px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,#f6fcff,#fff9fc)}
+.history-card img{width:105px;height:140px;object-fit:cover;object-position:center top;border-radius:14px;background:#eaf8ff}
+.history-card p{font-size:10px;line-height:1.5;color:var(--muted);margin:5px 0}
+.chat-story{text-align:left}.chat-story>h2{text-align:center;margin:7px 0 14px}
+.chat-thread{display:grid;gap:12px;padding:8px 2px 12px}
+.chat-row{display:flex;gap:9px;align-items:flex-end}.chat-row.idol{justify-content:flex-start}.chat-row.president{justify-content:flex-end}
+.chat-row img{width:58px;height:74px;border-radius:15px;object-fit:cover;object-position:center top;background:#eaf8ff;box-shadow:0 6px 16px rgba(53,126,160,.13)}
+.chat-row small{display:block;font-size:9px;color:var(--muted);font-weight:850;margin:0 0 3px 6px}
+.chat-row.president small{text-align:right;margin:0 6px 3px 0}
+.bubble{max-width:500px;padding:12px 14px;border-radius:17px 17px 17px 5px;background:#edf9ff;border:1px solid #d8edf7;font-size:12px;line-height:1.7;color:#315f74}
+.chat-row.president .bubble{border-radius:17px 17px 5px 17px;background:#fff2f8;border-color:#f2dce7}
+.president-avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#65cef7,#8eddfb);color:#fff;font-weight:950;box-shadow:0 6px 16px rgba(53,126,160,.15)}
+.effect-preview{display:block;margin-top:7px;padding-top:7px;border-top:1px dashed #d8eaf2;color:#1787b8;font-size:9px;font-weight:900;line-height:1.5}
+.story-result{padding-top:7vh}.reaction-panel{display:grid;grid-template-columns:90px 1fr;gap:12px;align-items:center;text-align:left;padding:14px;border-radius:18px;background:#f7fcff;border:1px solid var(--line);margin:14px 0}
+.reaction-panel img{width:90px;height:115px;object-fit:cover;object-position:center top;border-radius:15px;background:#eaf8ff}
+.reaction-panel strong{font-size:13px;line-height:1.6}.reaction-panel p{font-size:10px;color:var(--muted);margin:6px 0 0}
+.effect-result{padding:15px;border-radius:18px;background:linear-gradient(135deg,#eefaff,#fff1f7);margin:10px 0}
+.effect-result span{display:block;font-size:9px;color:var(--muted);font-weight:850;margin-bottom:5px}.effect-result strong{font-size:13px;line-height:1.6;color:#2f7897}
+.memory-note{font-size:10px;color:var(--muted);line-height:1.55;margin:12px 0 16px}
+@media(max-width:560px){.bio-grid{grid-template-columns:1fr}.history-card{grid-template-columns:80px 1fr}.history-card img{width:80px;height:110px}.bubble{font-size:11px}.reaction-panel{grid-template-columns:75px 1fr}.reaction-panel img{width:75px;height:100px}}
