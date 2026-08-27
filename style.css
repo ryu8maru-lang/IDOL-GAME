@@ -221,3 +221,15 @@ linear-gradient(180deg,#7ed8fa,#9ea1ff 50%,#443c74);position:relative;overflow:h
  50%{transform:scale(1.08);filter:blur(4px);opacity:1}
 }
 .live-cinematic{border:2px solid #9fe3ff;box-shadow:0 14px 34px rgba(57,161,205,.18)}
+
+/* v0.13 LIFE SYSTEM */
+.life-core-card{margin:14px 0;padding:14px 15px;border-radius:18px;background:linear-gradient(135deg,#f2fbff,#fff4f9);border:1px solid var(--line);box-shadow:0 8px 20px rgba(69,143,177,.08)}
+.life-core-title{display:flex;justify-content:space-between;gap:10px;align-items:center}.life-core-title span{font-size:9px;color:var(--muted);font-weight:900;letter-spacing:.08em}.life-core-title strong{font-size:13px}
+.life-core-card p{font-size:11px;line-height:1.6;margin:9px 0;color:#4f7486}.life-distance{font-size:10px;color:var(--muted)}
+.emotion-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:12px 0}.emotion-cell{padding:9px;border-radius:13px;background:#fff;border:1px solid var(--line);text-align:center}.emotion-cell span{display:block;font-size:8px;color:var(--muted);font-weight:850}.emotion-cell strong{font-size:11px}
+.emotion-meter{height:5px;background:#edf4f7;border-radius:999px;overflow:hidden;margin:6px 0}.emotion-meter i{display:block;height:100%;background:linear-gradient(90deg,#6ad3f9,#ffa1ca);border-radius:999px}
+.memory-stack{display:grid;gap:7px}.memory-chip{display:grid;grid-template-columns:26px 1fr;gap:7px;align-items:start;padding:9px 10px;border-radius:13px;background:#f8fdff;border:1px solid #dceef6}.memory-chip.promise{background:#fff9e9;border-color:#f2dfaa}.memory-chip p{font-size:10px;line-height:1.5;margin:0;color:#56798a}
+.inner-state{position:absolute;left:10px;right:10px;bottom:54px;padding:7px 9px;border-radius:12px;background:rgba(33,72,91,.72);backdrop-filter:blur(7px);color:#fff;font-size:8px;line-height:1.4;text-align:center}
+.memory-whisper{margin:9px 0;padding:9px 11px;border-radius:13px;background:#fffbea;border:1px solid #f1e1a9;color:#7b6b38;font-size:9px;line-height:1.5}
+.reaction-name{font-size:9px;font-weight:900;color:var(--muted);letter-spacing:.06em;margin-bottom:6px}.after-emotions{margin-top:10px;padding:9px 10px;border-radius:12px;background:#f7fbfd;color:#587989;font-size:9px;line-height:1.5}.life-result .reaction-copy strong{font-size:15px}
+@media(max-width:680px){.emotion-grid{grid-template-columns:repeat(2,1fr)}.emotion-cell:last-child{grid-column:1 / -1}}
