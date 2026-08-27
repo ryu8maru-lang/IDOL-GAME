@@ -96,3 +96,7 @@ linear-gradient(180deg,#7ed8fa,#9ea1ff 50%,#443c74);position:relative;overflow:h
  .result-stats{grid-template-columns:repeat(2,1fr)}.live-choice{grid-template-columns:1fr}.stage-visual{min-height:290px}
  .rank-row{grid-template-columns:28px 1fr 55px 50px;font-size:9px}.fan-grid,.staff-grid{grid-template-columns:1fr}
 }
+
+/* v0.10 visual asset stability */
+.member-card img,.idol-chip img,.profile-head img,.song-thumb img,.poster-people img,.stage-people img{background:#eaf8ff}
+.member-card>img{aspect-ratio:3/4;object-fit:cover;object-position:center top}
