@@ -260,3 +260,151 @@ html,body{background:#10131a} body{padding:0 0 104px;min-height:100vh}.app{max-w
 .center-feature{display:grid;grid-template-columns:300px 1fr;gap:16px;padding:13px}.center-feature .character-stage{min-height:360px}.center-feature h2{font-size:28px}.center-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.center-stat-grid span{background:#282e39;border-radius:9px;padding:8px;font-size:8px;color:#abb4c0}.center-stat-grid b{display:block;color:#fff;font-size:12px}.standalone{margin-top:16px;padding-left:0;border:0}.app-member-grid .member-card,.office-page .card,.office-page .staff,.office-page .venue{background:#1c212b;color:#eef1f5;border-color:#343b48}.app-member-grid .subline{color:#9da7b4}.office-summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.office-stat-card{padding:14px}.office-stat-card span{font-size:8px;color:#aaa}.office-stat-card strong{display:block;font-size:20px;margin:4px 0}.office-stat-card small{font-size:7px;color:#ff7fa9}.agency-group-row{display:grid;grid-template-columns:1fr 65px 85px auto;gap:7px;align-items:center;padding:10px 0;border-bottom:1px solid #ffffff12}.agency-group-row small{display:block;font-size:7px;color:#aaa}.agency-group-row span{font-size:8px}.upgrade-box{margin:10px 0;padding:10px;background:#242a35;border-radius:10px}.upgrade-box small{display:block;font-size:7px;color:#aaa;margin:4px 0 8px}.empty-office{padding:12px;color:#aaa;font-size:8px}
 @media(max-width:800px){.office-topbar{grid-template-columns:1fr auto}.office-topbar .top-resource,.top-week{display:none}.office-dashboard{grid-template-columns:1fr}.season-goal{grid-template-columns:1fr}.center-feature{grid-template-columns:1fr}.office-grid-2{grid-template-columns:1fr}}
 @media(max-width:560px){.office-brand strong{font-size:15px}.office-home{padding:18px 7px 110px}.office-welcome p{display:none}.office-date-orb{width:60px;height:60px}.office-date-orb strong{font-size:20px}.featured-visual{height:170px}.featured-copy{display:block}.featured-stats{justify-content:space-between;margin-top:7px}.consult-grid{grid-template-columns:100px 1fr}.consult-copy{padding:10px 7px}.office-action-grid{grid-template-columns:repeat(2,1fr)}.office-nav{width:calc(100% - 8px);bottom:4px;padding:4px}.office-nav button{flex-direction:column;gap:1px;font-size:8px;padding:6px 2px}.office-nav button .ni{font-size:17px}.office-summary-grid{grid-template-columns:1fr}.agency-group-row{grid-template-columns:1fr auto}.agency-group-row span{display:none}.audition-spotlight{grid-template-columns:1fr}}
+
+
+/* ==========================================================
+   v0.15 SKY UI - image-accurate interactive shell
+   ========================================================== */
+html,body{
+ margin:0!important;
+ padding:0!important;
+ min-height:100%!important;
+ background:#dff3ff!important;
+ overflow-x:hidden;
+}
+body{padding-bottom:0!important}
+.sky-app,.sky-page{
+ width:100%;
+ max-width:941px;
+ margin:0 auto;
+ position:relative;
+ background:#dff3ff;
+}
+.sky-page{
+ aspect-ratio:941/1672;
+ min-height:auto;
+ overflow:hidden;
+ box-shadow:0 0 40px rgba(55,120,180,.18);
+}
+.sky-page-bg{
+ position:absolute;
+ inset:0;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ display:block;
+ user-select:none;
+ -webkit-user-drag:none;
+}
+.sky-hotspots{position:absolute;inset:0;z-index:10}
+.hot,.sky-nav-hit{
+ position:absolute;
+ background:rgba(255,255,255,0.001)!important;
+ border:0!important;
+ box-shadow:none!important;
+ padding:0!important;
+ margin:0!important;
+ min-width:0!important;
+ min-height:0!important;
+ border-radius:0!important;
+}
+.hot:active,.sky-nav-hit:active{background:rgba(70,160,255,.12)!important}
+
+/* global nav hit zones */
+.sky-nav-hit{bottom:1.2%;height:8.1%;z-index:30}
+
+/* top menu */
+.hit-menu{right:3.4%;top:4.4%;width:8.8%;height:5.8%}
+
+/* HOME */
+.hit-feature{left:3.5%;top:13.7%;width:90%;height:29%}
+.hit-feature-detail{right:4%;top:32.7%;width:22%;height:4.7%}
+.hit-mission{left:3.5%;top:44.4%;width:47%;height:20.7%}
+.hit-consult{right:3.5%;top:44.4%;width:45%;height:20.7%}
+.hit-main-goal{left:3.5%;top:65.8%;width:47%;height:22.5%}
+.hit-office-status{right:3.5%;top:65.8%;width:45%;height:22.5%}
+
+/* MEMBERS */
+.hit-center-profile{left:3.5%;top:17.2%;width:93%;height:24%}
+.hit-member-grid{left:3.5%;top:42%;width:93%;height:36%}
+.hit-relations{left:3.5%;top:78.2%;width:93%;height:12%}
+
+/* AUDITION */
+.hit-audition-main{left:30%;top:82.8%;width:40%;height:6.4%}
+.hit-audition-list{right:4%;top:82.8%;width:24%;height:6.4%}
+
+/* LIVE */
+.hit-live-setlist{right:3.5%;top:43.2%;width:40%;height:30%}
+.hit-live-goal{left:3.5%;top:74.5%;width:58%;height:14%}
+.hit-live-start{right:3.5%;top:74.5%;width:34%;height:14%}
+
+/* OFFICE */
+.hit-office-overview{left:3.5%;top:14.5%;width:93%;height:14%}
+.hit-office-finance{left:3.5%;top:29%;width:30%;height:18%}
+.hit-office-staff{left:34.5%;top:29%;width:30%;height:18%}
+.hit-office-brand{right:3.5%;top:29%;width:30%;height:18%}
+.hit-office-upgrade{left:3.5%;top:48%;width:30%;height:17%}
+.hit-office-project{left:34.5%;top:48%;width:62%;height:17%}
+
+/* functional sheet */
+.sky-sheet-backdrop{
+ position:fixed;
+ inset:0;
+ z-index:1000;
+ background:rgba(16,37,69,.42);
+ backdrop-filter:blur(7px);
+ display:flex;
+ align-items:flex-end;
+ justify-content:center;
+}
+.sky-sheet{
+ width:min(941px,100%);
+ max-height:88vh;
+ overflow:auto;
+ background:linear-gradient(180deg,#f8fcff,#eef7ff);
+ border-radius:28px 28px 0 0;
+ box-shadow:0 -18px 50px rgba(35,84,138,.22);
+ color:#194c93;
+}
+.sky-sheet-head{
+ position:sticky;top:0;z-index:2;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:16px 18px;
+ background:rgba(248,252,255,.95);
+ border-bottom:1px solid #cfe3f7;
+ backdrop-filter:blur(10px);
+}
+.sky-sheet-head strong{font-size:18px}
+.sky-sheet-head button{background:#fff;color:#3574bb;border:1px solid #c9def1;box-shadow:none;border-radius:50%;width:36px;height:36px;padding:0}
+.sky-sheet-body{padding:14px 14px 28px}
+.sky-action-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sky-action-grid button{
+ background:#fff;color:#20558e;border:1px solid #cfe2f3;box-shadow:0 6px 16px rgba(59,113,165,.08);
+ text-align:left;padding:13px;border-radius:16px
+}
+.sky-action-grid button.active{background:linear-gradient(135deg,#e9f7ff,#ffeef6);box-shadow:0 0 0 2px #77bdf0 inset}
+.sky-action-grid span{display:block;font-size:24px}.sky-action-grid strong{display:block;margin:4px 0;font-size:12px}.sky-action-grid small{display:block;color:#6e91b4;font-size:9px;line-height:1.5}
+.sky-primary{width:100%;margin-top:12px;background:linear-gradient(135deg,#ff77aa,#f05591);font-size:15px}
+.sky-menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sky-menu-grid button{background:#fff;color:#2e65a7;border:1px solid #cfe2f3;box-shadow:none;padding:18px 10px;border-radius:16px;font-size:24px}
+.sky-menu-grid strong{display:block;font-size:11px;margin-top:5px}
+.sky-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.sky-stats>div{background:#fff;border:1px solid #d5e6f5;border-radius:14px;padding:10px}.sky-stats span{display:block;font-size:8px;color:#7b99b8}.sky-stats strong{font-size:13px}
+.sky-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid #dce9f5}.sky-row small{display:block;color:#7d9ab7;font-size:8px}
+.sky-staff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.sky-staff{background:#fff;border:1px solid #d6e5f2;border-radius:12px;padding:10px}.sky-staff small{display:block;font-size:8px;color:#7894af;margin:4px 0}
+.sky-upgrade{margin-top:12px;background:#fff5fa;border:1px solid #f5d3e1;border-radius:14px;padding:12px}.sky-upgrade small{display:block;color:#8a6d7c;margin:4px 0 8px}
+.sky-mission-detail{text-align:center;background:#fff;border:1px solid #d5e6f5;border-radius:18px;padding:18px}.sky-progress{height:10px;background:#e5edf5;border-radius:999px;overflow:hidden;margin:12px 0}.sky-progress i{display:block;height:100%;background:linear-gradient(90deg,#4d9df4,#ff75a9)}
+
+/* make old content inside sheet readable */
+.sky-sheet .app-page,.sky-sheet .office-page{padding:0!important;max-width:none!important;color:#1f5a91!important}
+.sky-sheet .office-page:before{display:none!important}
+.sky-sheet .card,.sky-sheet .venue,.sky-sheet .staff,.sky-sheet .office-panel{
+ background:#fff!important;color:#20558f!important;border-color:#d4e4f2!important
+}
+.sky-sheet input,.sky-sheet select{background:#fff!important;color:#20558f!important}
+
+@media(max-width:600px){
+ .sky-sheet{border-radius:22px 22px 0 0}
+ .sky-sheet-body{padding:10px 10px 24px}
+ .sky-action-grid,.sky-staff-grid,.sky-menu-grid{grid-template-columns:1fr 1fr}
+}
