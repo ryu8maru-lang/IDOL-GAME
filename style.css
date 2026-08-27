@@ -128,3 +128,66 @@ linear-gradient(180deg,#7ed8fa,#9ea1ff 50%,#443c74);position:relative;overflow:h
 .effect-result span{display:block;font-size:9px;color:var(--muted);font-weight:850;margin-bottom:5px}.effect-result strong{font-size:13px;line-height:1.6;color:#2f7897}
 .memory-note{font-size:10px;color:var(--muted);line-height:1.55;margin:12px 0 16px}
 @media(max-width:560px){.bio-grid{grid-template-columns:1fr}.history-card{grid-template-columns:80px 1fr}.history-card img{width:80px;height:110px}.bubble{font-size:11px}.reaction-panel{grid-template-columns:75px 1fr}.reaction-panel img{width:75px;height:100px}}
+
+
+/* v0.12 2.5D CHARACTER */
+.character-stage{
+  position:relative; width:100%; min-height:240px; display:grid; place-items:end center;
+  overflow:hidden; border-radius:24px;
+  background:
+    radial-gradient(circle at 50% 28%,rgba(255,255,255,.95),transparent 23%),
+    radial-gradient(circle at 50% 55%,rgba(119,215,255,.25),transparent 42%),
+    linear-gradient(180deg,#ecfbff,#fff6fb);
+}
+.char-body-wrap{position:relative;width:88%;height:100%;display:grid;place-items:end center;animation:idleFloat 3.8s ease-in-out infinite}
+.char-body{width:100%;height:100%;max-height:420px;object-fit:cover;object-position:center top;display:block;transform-origin:50% 82%;animation:breathe 4.2s ease-in-out infinite}
+.char-shadow{position:absolute;bottom:5%;left:20%;right:20%;height:18px;border-radius:50%;background:rgba(62,116,143,.15);filter:blur(8px);animation:shadowPulse 4.2s ease-in-out infinite}
+.char-aura{position:absolute;inset:9% 12% 0;border-radius:50%;background:radial-gradient(circle,rgba(116,213,255,.22),transparent 66%);filter:blur(7px);animation:auraPulse 3.2s ease-in-out infinite}
+.char-highlight{position:absolute;inset:0;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.16) 49%,transparent 58%);transform:translateX(-130%);animation:shineSweep 7s ease-in-out infinite;pointer-events:none}
+.blink-mask{position:absolute;left:26%;right:26%;top:17%;height:6%;background:linear-gradient(180deg,rgba(241,210,198,.0),rgba(244,215,205,.48),rgba(241,210,198,0));opacity:0;transform:scaleY(.1);animation:blinkSweep 5.4s infinite;pointer-events:none;border-radius:50%}
+.character-stage.talking .char-body{animation:breathe 3s ease-in-out infinite,talkBob .34s ease-in-out infinite alternate}
+.character-stage.talking .char-body-wrap{animation:talkSway 1.6s ease-in-out infinite}
+.character-stage.happy .char-aura{background:radial-gradient(circle,rgba(255,190,220,.30),transparent 68%)}
+.character-stage.sad{filter:saturate(.88) brightness(.98)}
+.character-stage.sad .char-body{transform:translateY(3px) scale(.995)}
+.character-stage.tense .char-aura{background:radial-gradient(circle,rgba(170,150,255,.24),transparent 68%)}
+.character-stage.determined .char-aura{background:radial-gradient(circle,rgba(255,201,103,.25),transparent 68%)}
+.character-stage.soft .char-aura{background:radial-gradient(circle,rgba(153,231,217,.26),transparent 68%)}
+
+.cinematic-story{max-width:960px}
+.cinematic-dialogue{display:grid;grid-template-columns:minmax(220px,.8fr) 1.2fr;gap:18px;align-items:stretch}
+.character-column{position:relative;min-width:0}.story-character{height:100%;min-height:460px}
+.char-nameplate{position:absolute;left:12px;right:12px;bottom:12px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);font-size:11px;font-weight:950;text-align:center;box-shadow:0 6px 16px rgba(52,113,141,.12)}
+.dialogue-column{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.big-bubble{font-size:14px;line-height:1.8;max-width:none;padding:16px 18px;border-radius:22px 22px 22px 7px}
+.president-reply{display:flex;justify-content:flex-end;align-items:flex-end;gap:9px;margin:12px 0 4px}.president-bubble{max-width:460px}
+.choice-list{display:grid;gap:8px;margin-top:12px}.choice-btn{text-align:left;background:#fff;color:#315f74;border:1px solid var(--line);box-shadow:none;padding:12px 13px}.choice-btn:hover{background:#f7fcff}
+.choice-btn strong{display:block;font-size:12px}.choice-btn small{display:block;color:var(--muted);font-size:9px;margin-top:3px}
+
+.profile-25d{grid-template-columns:240px 1fr;align-items:center}.profile-character{min-height:300px}
+.profile-25d .character-stage{width:240px}
+.profile-25d .char-body{max-height:330px}
+
+.result-character-wrap{display:grid;grid-template-columns:230px 1fr;gap:16px;align-items:center;margin:15px 0}
+.result-character{min-height:300px}.reaction-copy{text-align:left}.reaction-copy strong{font-size:14px;line-height:1.7}.reaction-copy p{color:var(--muted);font-size:11px;line-height:1.6;margin-top:7px}
+
+.live-cinematic{overflow:hidden;margin-bottom:12px;background:linear-gradient(135deg,#eefaff,#fff3f8)}
+.live-cine-grid{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:center}.live-character{min-height:340px}
+.live-cine-copy h2{font-size:24px;margin-bottom:8px}.live-cine-copy p{font-size:12px;line-height:1.7;color:var(--muted)}
+.live-quote{margin-top:14px;padding:12px 14px;border-radius:16px;background:#fff;border:1px solid var(--line);font-weight:900;font-size:13px}
+
+@keyframes breathe{0%,100%{transform:scale(1) translateY(0)}50%{transform:scale(1.012) translateY(-2px)}}
+@keyframes idleFloat{0%,100%{transform:translateX(0)}50%{transform:translateX(2px)}}
+@keyframes talkBob{from{transform:translateY(0) scale(1.006)}to{transform:translateY(-2px) scale(1.012)}}
+@keyframes talkSway{0%,100%{transform:rotate(-.35deg)}50%{transform:rotate(.35deg)}}
+@keyframes auraPulse{0%,100%{opacity:.65;transform:scale(.98)}50%{opacity:1;transform:scale(1.03)}}
+@keyframes shadowPulse{0%,100%{transform:scaleX(.96);opacity:.12}50%{transform:scaleX(1.05);opacity:.18}}
+@keyframes shineSweep{0%,72%{transform:translateX(-130%)}85%,100%{transform:translateX(130%)}}
+@keyframes blinkSweep{0%,44%,48%,100%{opacity:0;transform:scaleY(.1)}45%,47%{opacity:.68;transform:scaleY(.65)}}
+
+@media(max-width:720px){
+ .cinematic-dialogue{grid-template-columns:1fr}.story-character{min-height:330px}.character-column{max-height:350px}
+ .profile-25d{grid-template-columns:1fr}.profile-25d .character-stage{width:100%}.profile-character{min-height:360px}
+ .result-character-wrap{grid-template-columns:1fr}.result-character{min-height:330px}
+ .live-cine-grid{grid-template-columns:1fr}.live-character{min-height:320px}
+}
