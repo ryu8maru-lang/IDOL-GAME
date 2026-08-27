@@ -191,3 +191,33 @@ linear-gradient(180deg,#7ed8fa,#9ea1ff 50%,#443c74);position:relative;overflow:h
  .result-character-wrap{grid-template-columns:1fr}.result-character{min-height:330px}
  .live-cine-grid{grid-template-columns:1fr}.live-character{min-height:320px}
 }
+
+
+/* v0.12.1 FIX: strong visible motion + cache-busted deployment */
+.mode-badge{
+ display:inline-block;margin-left:5px;padding:3px 6px;border-radius:999px;
+ background:linear-gradient(135deg,#6dd4ff,#ff9dcc);color:#fff;
+ font-size:8px;letter-spacing:.04em;vertical-align:middle;
+}
+.idol-photo-alive{animation:memberAlive 3.2s ease-in-out infinite;transform-origin:50% 75%}
+@keyframes memberAlive{
+ 0%,100%{transform:scale(1) translateY(0)}
+ 50%{transform:scale(1.025) translateY(-3px)}
+}
+.character-stage.talking .char-body{
+ animation:breatheStrong 2.4s ease-in-out infinite,talkBobStrong .28s ease-in-out infinite alternate !important;
+}
+@keyframes breatheStrong{
+ 0%,100%{transform:scale(1) translateY(0)}
+ 50%{transform:scale(1.035) translateY(-5px)}
+}
+@keyframes talkBobStrong{
+ from{filter:brightness(1);transform:translateY(0) scale(1.02)}
+ to{filter:brightness(1.035);transform:translateY(-5px) scale(1.04)}
+}
+.story-character .char-aura,.live-character .char-aura{opacity:1;animation:auraStrong 2.1s ease-in-out infinite}
+@keyframes auraStrong{
+ 0%,100%{transform:scale(.94);filter:blur(8px);opacity:.55}
+ 50%{transform:scale(1.08);filter:blur(4px);opacity:1}
+}
+.live-cinematic{border:2px solid #9fe3ff;box-shadow:0 14px 34px rgba(57,161,205,.18)}
